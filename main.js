@@ -2,7 +2,9 @@
 // and returns the value of the 'name' property of the given object.
 
 var getName = function(obj){
-	return obj.name;
+	return obj[name];
+
+	// or return obj.name;
 };
 
 
@@ -68,6 +70,105 @@ var printObject = function(obj) {
 	}
 	console.log(str);
 };
+
+
+// Write a function called 'vowels' which takes a string and returns 
+// an array of all the vowels in the string, including duplicates.
+
+// vowels('alabama') should return ['a', 'a', 'a', 'a']
+// vowels('What lets in youth?') should return ['a', 'e', 'i', 'o', 'u']
+
+var vowels = function(str) {
+	var regexp = /[AEIOU]/gi;
+	var newArray = str.match(regexp);
+	return newArray; 
+};
+
+// Write a function called 'twins' which takes an array and 
+// returns true if every pair of items in the array is the same.
+
+// twins(['a', 'a', 'b', 'b', 'c', 'c']) should return true
+// twins(['a', 'a', 'b', 'z']) should return false
+// twins(['a', 'a', 'b']) should return false
+// twins(['a', 'a', 'b', undefined]) should return false
+
+var twins = function() {
+
+};
+
+
+// Write a function called 'or' which takes an array of booleans and 
+// returns true if any one of them is true. Given an empty array, 
+// return false. If you find an item that is true, the function should 
+// return true immediately and not continue checking further values.
+
+// or([false, false, true, false]) should return true
+// or([false, false, false]) should return false
+// or([]) should return false
+
+// var or = function(arr) {
+// 	for( var i = 0; i < arr.length; i++) {
+// 		if (arr[i]) {
+// 			return true;
+// 			// break;
+// 		}
+
+// 		else if (arr[i] === undefined) {
+// 			return false;
+// 		}
+
+// 		else {
+// 			return false;
+// 		}
+// 	}	
+// };
+
+var or = function(arr) {
+	var data = [];
+	for( var i = 0; i < arr.length; i++) {
+		if (arr[i]) {
+			data.push(true);
+		}
+	}
+	if (data.length > 0) {
+		return true;
+	}
+	else {
+		return false;
+	}
+	
+};
+
+
+// Write a function called 'unique' which takes an array of strings, 
+// and returns a new array consisting of the unique values (no duplicates).
+
+// unique(['a', 'b', 'a', 'c', 'd', 'd']) should return ['a', 'b', 'c', 'd']
+// unique(['todd', 'avery', 'maria', 'avery']) should return ['todd', 'avery', 'maria']
+
+var unique = function() {
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
